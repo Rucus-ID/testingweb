@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIVE RUCUS - REDEBUT SHOWCASE PART 2</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome 6 Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Fredoka:wght@300..700&family=Press+Start+2P&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* PALET WARNA RESMI BANNER RUCUS */
+      --c-blue-bell: #3F8EC6;
+      --c-steel-blue: #5DA4D4;
+      --c-sky-reflection: #68B3DB;
+      --c-sky-reflection-2: #81BADD;
+      --c-icy-blue: #B2DCF0;
+      --c-pale-sky: #CBECFB;
+      --c-pale-sky-2: #D1E5EF;
+      --c-vanilla-custard: #F7E39F;
+      --c-cotton-rose: #FFC5C7;
+      --c-white: #FFFFFF;
+
+      /* LIGHT MODE SURFACE & TYPOGRAPHY */
+      --c-light-bg: #f4f9fd;
+      --glass-card-bg: rgba(255, 255, 255, 0.95);
+      --glass-card-border: rgba(63, 142, 198, 0.22);
+      --text-main: #0c2340;
+      --text-sub: #1e3e62;
+      --text-muted: #507090;
+      --shadow-fluffy: 0 8px 24px rgba(63, 142, 198, 0.12);
+      --shadow-hover: 0 12px 30px rgba(63, 142, 198, 0.22);
+
+      /* BACKGROUND SECTION */
+      --sec-identity-bg: linear-gradient(180deg, #f4f9fd 0%, #e4f2fb 50%, #f4f9fd 100%);
+      --sec-interests-bg: radial-gradient(circle at 50% 50%, #fdf4f6 0%, #f4f9fd 85%);
+      --sec-credits-bg: radial-gradient(circle at 80% 40%, #fff9e6 0%, #f4f9fd 85%);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--c-light-bg); color: var(--text-main); overflow-x: hidden; }
+    body { background-color: var(--c-light-bg); padding-top: 75px; padding-bottom: 65px; position: relative; }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #eef6fc; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--c-blue-bell), var(--c-cotton-rose)); border-radius: 6px; border: 2px solid #eef6fc; }
+
+    h1, h2, h3, h4, h5, .brand-font { font-family: 'Fredoka', sans-serif; letter-spacing: 1px; color: var(--text-main); }
+    h6, .brand-font2 { font-family: 'Times New Roman', serif; letter-spacing: 1px; color: var(--text-main); }
+    .font-syne { font-family: 'Syne', sans-serif; }
+
+    .text-blue-bell { color: var(--c-blue-bell) !important; }
+    .text-steel { color: var(--c-steel-blue) !important; }
+    .text-custard { color: #b38500 !important; }
+    .text-rose { color: #d94b68 !important; }
+    .text-navy { color: var(--text-main) !important; }
+    .text-sub-navy { color: var(--text-sub) !important; }
+    .text-muted { color: var(--text-muted) !important; }
+    .glow-text-blue { text-shadow: 0 4px 15px rgba(63, 142, 198, 0.35); }
+    .glow-text-rose { text-shadow: 0 4px 15px rgba(255, 197, 199, 0.6); }
+
+    .glass-card { background: var(--glass-card-bg); border: 1.5px solid var(--glass-card-border); border-radius: 24px; box-shadow: var(--shadow-fluffy); transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+    .glass-card:hover { border-color: var(--c-blue-bell); box-shadow: var(--shadow-hover); }
+
+    .presentation-section { position: relative; min-height: calc(100vh - 75px); width: 100%; padding: 80px 20px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid rgba(63, 142, 198, 0.08); }
+    
+    .glass-header { background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid rgba(63, 142, 198, 0.2); z-index: 1050; box-shadow: 0 4px 20px rgba(63, 142, 198, 0.12); }
+    .header-logo { max-height: 44px; width: auto; object-fit: contain; border-radius: 10px; box-shadow: 0 3px 10px rgba(63, 142, 198, 0.25); transition: transform 0.3s ease; }
+    .header-logo:hover { transform: scale(1.05); }
+    .scroll-progress-container { position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: rgba(63, 142, 198, 0.1); }
+    .scroll-progress-bar { height: 100%; width: 0%; background: linear-gradient(90deg, var(--c-blue-bell), var(--c-steel-blue), var(--c-cotton-rose), var(--c-vanilla-custard)); box-shadow: 0 0 10px var(--c-blue-bell); transition: width 0.1s linear; }
+
+    .glass-footer { background: rgba(255, 255, 255, 0.95); border-top: 1px solid rgba(63, 142, 198, 0.25); z-index: 1050; height: auto; min-height: 55px; }
+    .social-link { color: var(--c-blue-bell); font-size: 1.25rem; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: var(--c-pale-sky); }
+    .social-link:hover { color: var(--c-white); background: var(--c-blue-bell); transform: translateY(-3px); box-shadow: 0 6px 14px rgba(63, 142, 198, 0.4); }
+    
+    .btn-social { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 18px; border-radius: 50px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: all 0.3s ease; border: none; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1); }
+    .btn-social:hover { transform: translateY(-3px) scale(1.02); color: #ffffff !important; }
+    .btn-social-x { background: linear-gradient(135deg, #14171a, #000000); color: #ffffff !important; }
+    .btn-social-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #ffffff !important; }
+    .btn-social-youtube { background: linear-gradient(135deg, #ff0000, #cc0000); color: #ffffff !important; }
+
+    /* SECTION 6: IDENTITY */
+    #identity { background: var(--sec-identity-bg); }
+    .identity-stat-card { padding: 18px 14px; border-radius: 20px; background: rgba(255, 255, 255, 0.95); border: 1.5px solid rgba(63, 142, 198, 0.18); box-shadow: 0 6px 20px rgba(12, 35, 64, 0.04); transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    .identity-stat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(63, 142, 198, 0.2); border-color: var(--c-blue-bell); }
+    .stat-icon-circle { width: 50px; height: 50px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; margin-bottom: 10px; background: var(--c-pale-sky); box-shadow: 0 4px 12px rgba(63, 142, 198, 0.15); transition: transform 0.3s ease; }
+    .identity-stat-card:hover .stat-icon-circle { transform: scale(1.1) rotate(4deg); }
+    .spec-item-row { padding: 14px 18px; border-radius: 16px; background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(63, 142, 198, 0.15); box-shadow: 0 4px 12px rgba(12, 35, 64, 0.03); display: flex; align-items: center; justify-content: space-between; transition: all 0.25s ease; }
+    .spec-item-row:hover { background: var(--c-white); border-color: var(--c-blue-bell); transform: translateX(4px); box-shadow: 0 6px 16px rgba(63, 142, 198, 0.15); }
+    .hashtag-card-enhanced { padding: 18px; border-radius: 20px; background: rgba(255, 255, 255, 0.95); border: 1.5px solid rgba(63, 142, 198, 0.18); box-shadow: 0 6px 18px rgba(12, 35, 64, 0.04); transition: all 0.3s ease; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height:100%;}
+    .hashtag-card-enhanced:hover { transform: translateY(-5px); box-shadow: 0 12px 28px rgba(63, 142, 198, 0.22); border-color: var(--c-blue-bell); }
+    .hashtag-pill-badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 16px; border-radius: 30px; background: linear-gradient(135deg, var(--c-pale-sky) 0%, var(--c-icy-blue) 100%); border: 1px solid var(--c-steel-blue); color: var(--text-main); font-weight: 800; font-size: 0.88rem; font-family: 'Orbitron', sans-serif; box-shadow: 0 3px 8px rgba(63, 142, 198, 0.12); }
+
+    /* SECTION 7: INTERESTS */
+    #interests { background: var(--sec-interests-bg); }
+    .interests-table-card { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(12px); border-radius: 24px; border: 2px solid var(--c-icy-blue); box-shadow: var(--shadow-fluffy); overflow: hidden; transition: all 0.3s ease; }
+    .interests-table-card:hover { box-shadow: var(--shadow-hover); border-color: var(--c-steel-blue); }
+    .interests-table { margin-bottom: 0; vertical-align: middle; border-collapse: separate; border-spacing: 0; width: 100%; }
+    .interests-table th, .interests-table td { padding: 18px 20px; border-bottom: 1.5px solid rgba(209, 229, 239, 0.6); }
+    .interests-table thead th { font-family: 'Orbitron', sans-serif; font-weight: 800; font-size: 0.95rem; text-transform: uppercase; padding: 20px; }
+    .th-category { width: 14%; color: var(--text-main); background: linear-gradient(135deg, rgba(203, 236, 251, 0.6) 0%, rgba(225, 240, 249, 0.6) 100%) !important; border-right: 1.5px solid rgba(209, 229, 239, 0.8); }
+    .th-likes { width: 43%; color: var(--c-blue-bell); background: linear-gradient(135deg, rgba(230, 243, 250, 0.9) 0%, rgba(200, 230, 246, 0.9) 100%) !important; border-right: 1.5px solid rgba(209, 229, 239, 0.8); }
+    .th-dislikes { width: 43%; color: #d94b68; background: linear-gradient(135deg, rgba(255, 240, 242, 0.9) 0%, rgba(255, 220, 224, 0.9) 100%) !important; }
+    .interests-table td.td-category { font-size: 1.8rem; background: rgba(244, 249, 253, 0.7); border-right: 1.5px solid rgba(209, 229, 239, 0.8); text-align: center; }
+    .interests-table td.td-likes { border-right: 1.5px solid rgba(209, 229, 239, 0.8); background: rgba(255, 255, 255, 0.5); }
+    .interests-table td.td-dislikes { background: rgba(255, 252, 253, 0.5); }
+    .tag-container { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .tag-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 20px; font-size: 0.84rem; font-weight: 600; transition: all 0.25s ease; cursor: default; user-select: none; }
+    .tag-like { background: rgba(230, 243, 250, 0.95); color: var(--c-blue-bell); border: 1.5px solid var(--c-icy-blue); }
+    .tag-like:hover { background: var(--c-blue-bell); color: var(--c-white); border-color: var(--c-blue-bell); }
+    .tag-like i { color: #e63946; }
+    .tag-dislike { background: rgba(255, 240, 242, 0.95); color: #d94b68; border: 1.5px solid var(--c-cotton-rose); }
+    .tag-dislike:hover { background: #d94b68; color: var(--c-white); border-color: #d94b68; }
+
+    /* SECTION 8: SHOWCASE */
+    #meowtiverse-showcase { background: linear-gradient(180deg, #f4f9fd 0%, #e6f3fc 50%, #f4f9fd 100%); }
+    .meow-category-wrapper { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .meow-category-badge { padding: 10px 20px; border-radius: 30px; background: var(--c-white); border: 1.5px solid var(--c-icy-blue); color: var(--text-main); font-family: 'Orbitron', sans-serif; font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px; }
+    .meow-category-badge:hover, .meow-category-badge.active { background: linear-gradient(135deg, var(--c-blue-bell), var(--c-steel-blue)); color: var(--c-white); border-color: var(--c-blue-bell); transform: translateY(-2px); }
+    .meow-showcase-grid-panel { display: none; }
+    .meow-showcase-grid-panel.active { display: block; }
+    .meow-showcase-card { background: var(--c-white); border-radius: 18px; border: 1.5px solid var(--c-icy-blue); overflow: hidden; box-shadow: var(--shadow-fluffy); transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; }
+    .meow-showcase-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: var(--shadow-hover); border-color: var(--c-blue-bell); }
+    .meow-card-img-wrapper { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: radial-gradient(circle at 50% 50%, #e6f3fa 0%, #d4ebf8 100%); }
+    .meow-card-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .meow-showcase-card:hover .meow-card-img { transform: scale(1.08); }
+
+    /* SECTION 9: CREDITS */
+    #credits { background: var(--sec-credits-bg); }
+    .creator-card-full { display: none; margin-bottom: 28px; width: 100%; }
+    .creator-card-full.active { display: block; animation: fadeInScale 0.4s ease-out; }
+    @keyframes fadeInScale { from { opacity: 0; transform: scale(0.97); } to { opacity: 1; transform: scale(1); } }
+    .creator-work-frame { width: 100%; height: 360px; object-fit: cover; border-radius: 20px; border: 2px solid var(--c-pale-sky-2); box-shadow: var(--shadow-fluffy); }
+    .creator-avatar-circle { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 3px solid var(--c-blue-bell); box-shadow: 0 4px 15px rgba(63, 142, 198, 0.3); }
+    .creator-sub-card { background: rgba(255, 255, 255, 0.85); border: 1.5px solid var(--c-icy-blue); border-radius: 20px; padding: 24px 20px; height: 100%; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 6px 16px rgba(63, 142, 198, 0.08); }
+    .creator-sub-card:hover { transform: translateY(-5px); background: #ffffff; border-color: var(--c-blue-bell); box-shadow: 0 12px 28px rgba(63, 142, 198, 0.2); }
+
+    /* THE END SECTION */
+    #the-end { position: relative; min-height: calc(100vh - 75px); background: var(--sec-credits-bg); display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+    .the-end-bg-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 0; }
+    .the-end-bg-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.35; transition: opacity 0.3s ease; }
+    .the-end-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, rgba(244, 249, 253, 0.45) 0%, rgba(230, 243, 250, 0.85) 100%); z-index: 1; }
+    .the-end-content-wrapper { position: relative; z-index: 2; }
+
+    /* MARQUEE CREDITS */
+    .marquee-card-container { overflow: hidden; white-space: nowrap; width: 100%; position: relative; padding: 16px 0; background: linear-gradient(135deg, rgba(203, 236, 251, 0.3) 0%, rgba(244, 249, 253, 0.6) 100%); border-radius: 18px; border: 1.5px solid var(--c-icy-blue); box-shadow: inset 0 2px 8px rgba(63, 142, 198, 0.08); mask-image: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%); }
+    .marquee-card-content { display: inline-flex; align-items: center; width: max-content; will-change: transform; }
+    .marquee-dir-left-to-right { animation: marqueeLeftToRight 36s linear infinite; }
+    .marquee-dir-right-to-left { animation: marqueeRightToLeft 36s linear infinite; }
+    .marquee-card-container:hover .marquee-card-content { animation-play-state: paused; }
+    .marquee-avatar-item { width: 120px; height: 120px; border-radius: 50%; flex-shrink: 0; transition: transform 0.25s ease; cursor: pointer; }
+    .marquee-avatar-item:hover { transform: scale(1.25) translateY(-3px); z-index: 10; }
+    .marquee-avatar-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid var(--c-white); background: var(--c-icy-blue); display: block; }
+    @keyframes marqueeLeftToRight { 0% { transform: translate3d(-50%, 0, 0); } 100% { transform: translate3d(0%, 0, 0); } }
+    @keyframes marqueeRightToLeft { 0% { transform: translate3d(0%, 0, 0); } 100% { transform: translate3d(-50%, 0, 0); } }
+
+    @media (max-width: 768px) { .presentation-section { padding: 50px 15px; } }
+    @media (max-width: 576px) { .marquee-avatar-item { width: 75px; height: 75px; } }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar navbar-expand fixed-top glass-header py-2">
+    <div class="container-fluid px-3 px-md-4">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="D:\Desktop NVME\Pictures NVME\Stream\Badges\2000px (di atas 1 MB)\ShinyBadges.avif" alt="Logo Live Rucus" id="liveRucusLogo" class="header-logo" loading="lazy">
+        <span class="logo-text d-none d-sm-inline text-blue-bell brand-font fs-6 fw-bold">Rucus ID</span>
+      </a>
+    </div>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+  </header>
+
+  <main id="mainPresentationContainer">
+    <!-- IDENTITAS DAN KOMUNITAS SECTION -->
+    <section id="identity" class="presentation-section">
+      <div class="container">
+        <div class="text-center mb-4 gsap-id-header">
+          <h2 class="display-5 fw-bold text-navy glow-text-blue">IDENTITY & COMMUNITY</h2>
+          <p class="text-sub-navy">Mengenal lebih dekat identitas VTuber dan sebutan resmi fans komunitas</p>
+        </div>
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-11">
+            <div class="row g-4 align-items-stretch mb-4">
+              <div class="col-lg-7 gsap-id-left">
+                <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+                  <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
+                    <h4 class="text-navy font-syne fw-bold mb-0">
+                      <i class="fas fa-user-astronaut text-blue-bell me-2"></i> Identitas VTuber
+                    </h4>
+                  </div>
+                  <div class="row g-3 flex-grow-1 align-items-stretch">
+                    <div class="col-6"><div class="identity-stat-card"><div class="stat-icon-circle text-blue-bell"><i class="fas fa-id-badge"></i></div><div class="text-sub-navy fs-7 fw-semibold">Nama VTuber</div><div class="fs-5 fw-bold text-navy mt-1 font-syne">Rucus ID</div></div></div>
+                    <div class="col-6"><div class="identity-stat-card"><div class="stat-icon-circle text-rose" style="background: rgba(255, 197, 199, 0.35);"><i class="fas fa-birthday-cake"></i></div><div class="text-sub-navy fs-7 fw-semibold">Ulang Tahun</div><div class="fs-5 fw-bold text-navy mt-1 font-syne">19 April</div></div></div>
+                    <div class="col-6"><div class="identity-stat-card"><div class="stat-icon-circle text-custard" style="background: rgba(247, 227, 159, 0.4);"><i class="fas fa-paw"></i></div><div class="text-sub-navy fs-7 fw-semibold">Oshi Mark</div><div class="fs-5 fw-bold text-navy mt-1">🐾💙</div></div></div>
+                    <div class="col-6"><div class="identity-stat-card"><div class="stat-icon-circle text-steel" style="background: rgba(180, 220, 245, 0.4);"><i class="fas fa-users"></i></div><div class="text-sub-navy fs-7 fw-semibold">Sebutan Penggemar</div><div class="fs-5 fw-bold text-navy mt-1 font-syne">Meowtizen</div></div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5 gsap-id-right">
+                <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
+                      <h4 class="text-navy font-syne fw-bold mb-0">
+                        <i class="fas fa-ruler-vertical text-rose me-2"></i> Spesifikasi Fisik
+                      </h4>
+                    </div>
+                    <div class="d-flex flex-column gap-3 mt-3">
+                      <div class="spec-item-row"><div class="d-flex align-items-center gap-3"><div class="stat-icon-circle mb-0" style="width:42px; height:42px; font-size:1.1rem; background:rgba(63,142,198,0.15);"><i class="fas fa-arrows-alt-v text-blue-bell"></i></div><div><div class="fs-7 text-muted fw-semibold">Tinggi Badan</div><div class="fs-6 fw-bold text-navy">158 cm</div></div></div></div>
+                      <div class="spec-item-row"><div class="d-flex align-items-center gap-3"><div class="stat-icon-circle mb-0" style="width:42px; height:42px; font-size:1.1rem; background:rgba(217,75,104,0.15);"><i class="fas fa-weight text-rose"></i></div><div><div class="fs-7 text-muted fw-semibold">Berat Badan</div><div class="fs-6 fw-bold text-navy">52 Kg</div></div></div></div>
+                      <div class="spec-item-row"><div class="d-flex align-items-center gap-3"><div class="stat-icon-circle mb-0" style="width:42px; height:42px; font-size:1.1rem; background:rgba(247,227,159,0.35);"><i class="fas fa-cat text-custard"></i></div><div><div class="fs-7 text-muted fw-semibold">Spesies</div><div class="fs-6 fw-bold text-navy">Nekomimi</div></div></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card p-4 p-md-5 gsap-id-hashtags">
+              <div class="d-flex flex-wrap align-items-center justify-content-between mb-4 border-bottom pb-3 gap-2">
+                <div><h4 class="text-navy font-syne fw-bold mb-1"><i class="fas fa-hashtag text-custard me-2"></i> Tag Komunitas Resmi</h4></div>
+                <span class="badge bg-blue-bell text-white rounded-pill px-3 py-2 fs-7 fw-bold">4 Official Tags</span>
+              </div>
+              <div class="row g-3 g-md-4">
+                <div class="col-sm-6 col-lg-3"><div class="hashtag-card-enhanced" onclick="copyHashtag('#RucusLiveID', this)"><div><div class="d-flex align-items-center justify-content-between mb-2"><span class="hashtag-pill-badge">#RucusLiveID</span></div><div class="text-sub-navy fs-7 mb-2">Topik umum, jadwal live, interaksi.</div></div><div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary-subtle"><div class="fs-6 fw-bold text-navy">Livestream</div></div></div></div>
+                <div class="col-sm-6 col-lg-3"><div class="hashtag-card-enhanced" onclick="copyHashtag('#RucusFanArt', this)"><div><div class="d-flex align-items-center justify-content-between mb-2"><span class="hashtag-pill-badge">#RucusFanArt</span></div><div class="text-sub-navy fs-7 mb-2">Tempat membagikan gambar / karya seni.</div></div><div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary-subtle"><div class="fs-6 fw-bold text-navy">Karya Seni (SFW)</div></div></div></div>
+                <div class="col-sm-6 col-lg-3"><div class="hashtag-card-enhanced" onclick="copyHashtag('#RucusMeme', this)"><div><div class="d-flex align-items-center justify-content-between mb-2"><span class="hashtag-pill-badge">#RucusMeme</span></div><div class="text-sub-navy fs-7 mb-2">Khusus untuk berbagi meme.</div></div><div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary-subtle"><div class="fs-6 fw-bold text-navy">Meme Komedi</div></div></div></div>
+                <div class="col-sm-6 col-lg-3"><div class="hashtag-card-enhanced" onclick="copyHashtag('#RucusClip', this)"><div><div class="d-flex align-items-center justify-content-between mb-2"><span class="hashtag-pill-badge">#RucusClip</span></div><div class="text-sub-navy fs-7 mb-2">Potongan video momen seru.</div></div><div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary-subtle"><div class="fs-6 fw-bold text-navy">Potongan Klip</div></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERESTS SECTION -->
+    <section id="interests" class="presentation-section">
+      <div class="container">
+        <div class="text-center mb-4 gsap-interests-header">
+          <h2 class="display-5 fw-bold text-navy glow-text-rose">LIKES & DISLIKES</h2>
+          <p class="text-sub-navy">Tabel preferensi Rucus berdasarkan kategori</p>
+        </div>
+        <div class="interests-table-card gsap-interests-card">
+          <div class="table-responsive">
+            <table class="table interests-table align-middle">
+              <thead>
+                <tr>
+                  <th class="th-category text-center"><i class="fas fa-list text-steel me-2"></i> KATEGORI</th>
+                  <th class="th-likes text-center"><i class="fas fa-heart text-danger me-2"></i> LIKES</th>
+                  <th class="th-dislikes text-center"><i class="fas fa-heart-broken text-rose me-2"></i> DISLIKES</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="td-category text-center align-middle"><i class="fas fa-gamepad text-blue-bell category-icon-large"></i></td>
+                  <td class="td-likes"><div class="tag-container"><span class="tag-pill tag-like"><i class="fas fa-heart"></i> Warcraft</span><span class="tag-pill tag-like"><i class="fas fa-heart"></i> Tekken</span><span class="tag-pill tag-like"><i class="fas fa-heart"></i> Valorant</span></div></td>
+                  <td class="td-dislikes"><div class="tag-container"><span class="tag-pill tag-dislike"><i class="fas fa-heart-broken"></i> Genshin Impact</span><span class="tag-pill tag-dislike"><i class="fas fa-heart-broken"></i> Honkai Star Rail</span></div></td>
+                </tr>
+                <tr>
+                  <td class="td-category text-center align-middle"><i class="fas fa-utensils text-custard category-icon-large"></i></td>
+                  <td class="td-likes"><div class="tag-container"><span class="tag-pill tag-like"><i class="fas fa-heart"></i> Nasi</span><span class="tag-pill tag-like"><i class="fas fa-heart"></i> Duren</span></div></td>
+                  <td class="td-dislikes"><div class="tag-container"><span class="tag-pill tag-dislike"><i class="fas fa-heart-broken"></i> Sambal</span><span class="tag-pill tag-dislike"><i class="fas fa-heart-broken"></i> Jengkol</span></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEOWTIVERSE SHOWCASE -->
+    <section id="meowtiverse-showcase" class="presentation-section">
+      <div class="container">
+        <div class="text-center mb-4 gsap-showcase-header">
+          <h2 class="display-5 fw-bold text-navy glow-text-blue">MEOWTIVERSE SHOWCASE</h2>
+          <p class="text-sub-navy">Showcase arena &amp; kategori konten permainan yang akan hadir kedepannya</p>
+        </div>
+
+        <div class="meow-category-wrapper mb-4 gsap-showcase-nav">
+          <button class="meow-category-badge active" data-showcase-target="showcase-retro"><i class="fas fa-gamepad"></i> Retro</button>
+          <button class="meow-category-badge" data-showcase-target="showcase-chill"><i class="fas fa-mug-hot"></i> Chill</button>
+          <button class="meow-category-badge" data-showcase-target="showcase-competitive"><i class="fas fa-trophy"></i> Competitive</button>
+          <button class="meow-category-badge" data-showcase-target="showcase-strategy"><i class="fas fa-chess"></i> Strategy</button>
+          <button class="meow-category-badge" data-showcase-target="showcase-horror"><i class="fas fa-ghost"></i> Horror</button>
+          <button class="meow-category-badge" data-showcase-target="showcase-random"><i class="fas fa-dice"></i> Random</button>
+          <button class="meow-category-badge" data-showcase-target="showcase-collab"><i class="fas fa-handshake"></i> Collab</button>
+        </div>
+
+        <!-- RETRO -->
+        <div class="meow-showcase-grid-panel active" id="showcase-retro">
+          <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6 col-12"><div class="meow-showcase-card h-100"><div class="meow-card-img-wrapper"><img src="https://kresnik258gaming.wordpress.com/wp-content/uploads/2018/05/crash3hintguidehut.avif" alt="Retro 1" class="meow-card-img" loading="lazy"></div></div></div>
+            <div class="col-lg-4 col-md-6 col-12"><div class="meow-showcase-card h-100"><div class="meow-card-img-wrapper"><img src="https://cdn.aptoide.com/imgs/8/5/f/85fc714b2b5d4a3266ec62ae71b2b380_fgraphic.avif" alt="Retro 2" class="meow-card-img" loading="lazy"></div></div></div>
+            <div class="col-lg-4 col-md-6 col-12"><div class="meow-showcase-card h-100"><div class="meow-card-img-wrapper"><img src="https://www.animalkaiser.com/uk/img/title_evo8.avif" alt="Retro 3" class="meow-card-img" loading="lazy"></div></div></div>
+          </div>
+        </div>
+        
+        <!-- CHILL -->
+        <div class="meow-showcase-grid-panel" id="showcase-chill">
+          <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6 col-12"><div class="meow-showcase-card h-100"><div class="meow-card-img-wrapper"><img src="https://assets.telkomsel.com/public/2025-05/Apa-Itu-Yapping-Cari-Tau-Istilah-Viral-Ini-biar-Makin-Sigma.avif?VersionId=_P7ftzbuitpZ2Xgtzx5_3Z3lYZHy6B2Q" alt="Chill 1" class="meow-card-img" loading="lazy"></div></div></div>
+            <div class="col-lg-4 col-md-6 col-12"><div class="meow-showcase-card h-100"><div class="meow-card-img-wrapper"><img src="https://media.makeameme.org/created/time-to-review-f5cb0fd31b.avif" alt="Chill 2" class="meow-card-img" loading="lazy"></div></div></div>
+          </div>
+        </div>
+
+        <!-- COMPETITIVE -->
+        <div class="meow-showcase-grid-panel" id="showcase-competitive">
+          <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6 col-12"><div class="meow-showcase-card h-100"><div class="meow-card-img-wrapper"><img src="https://www.riotgames.com/darkroom/1440/8d5c497da1c2eeec8cffa99b01abc64b:5329ca773963a5b739e98e715957ab39/ps-f2p-val-console-launch-16x9.avif" alt="Competitive 1" class="meow-card-img" loading="lazy"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREATOR CREDITS -->
+    <section id="credits" class="presentation-section">
+      <div class="container">
+        <div class="text-center mb-4 gsap-credits-header">
+          <h2 class="display-5 fw-bold text-navy glow-text-rose">Kolaborator</h2>
+          <p class="text-sub-navy">Apresiasi kepada mereka yang sudah mendukung terbentuknya RucusLiveID</p>
+        </div>
+
+        <div class="row justify-content-center gy-4">
+          <!-- CARD: L2D Model Illustration -->
+          <div class="glass-card p-4 mb-4 creator-card-full active">
+            <div class="d-flex align-items-center gap-2 mb-4 pb-2 border-bottom border-secondary border-opacity-25">
+                <i class="fa-solid fa-paintbrush text-blue-bell fs-4"></i><h4 class="text-navy fw-bold mb-0">L2D Model Illustration</h4>
+            </div>
+            <div class="row gy-4 align-items-center">
+              <div class="col-md-7"><img src="K:\Editing Video\ProfilePict\11.avif" alt="Karya Kyokochi_Kyoko" class="creator-work-frame" loading="lazy"></div>
+              <div class="col-md-5">
+                <div class="creator-sub-card">
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <img src="https://pbs.twimg.com/profile_images/2093991552012193792/5ryFT3lc_400x400.avif" alt="Foto Profil kiyowou" class="creator-avatar-circle" loading="lazy">
+                    <div><span class="badge bg-primary px-3 py-1 mb-1">L2D Model</span><h3 class="text-navy fw-bold mb-0">kiyowou</h3></div>
+                  </div>
+                  <a href="https://x.com/puyokyokochi_" target="_blank" class="btn-social btn-social-x w-100"><i class="fa-brands fa-x-twitter"></i> @puyokyokochi_</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD: Special Thanks Marquee -->
+          <div class="glass-card p-4 mb-4 creator-card-full active" id="creatorCard18">
+            <div class="d-flex align-items-center gap-2 mb-3 pb-2 border-bottom border-secondary border-opacity-25">
+                <i class="fa-solid fa-heart text-danger fs-4"></i><h4 class="text-navy fw-bold mb-0">Special Thanks</h4>
+            </div>
+            <div class="d-flex flex-column gap-3">
+              <div class="marquee-card-container">
+                <div class="marquee-card-content marquee-dir-left-to-right">
+                  <div class="d-inline-flex gap-3 align-items-center me-3">
+                    <div class="marquee-avatar-item"><img src="https://yt3.ggpht.com/oLgi0v6vnxjF7-oeEMS50gHaZyH5vvTsU0VtibqexjCw18Iq7u194G-i3VzbVlgnngFCU7UQvg=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter" class="marquee-avatar-img" loading="lazy"></div>
+                    <div class="marquee-avatar-item"><img src="https://yt3.ggpht.com/xDwuNeazfapHHSz4bPKbkhNycmiAQhZLm8OtVt4m3PC9UdpWslpJeTTFMHlmAS5_EzXTX-bb=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter" class="marquee-avatar-img" loading="lazy"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE END -->
+    <section id="the-end" class="presentation-section">
+      <div class="the-end-bg-container">
+        <img src="D:\Desktop NVME\Pictures NVME\FanArt\ucufwsv2.avif" alt="The End Background Image" class="the-end-bg-img" id="theEndBgImg" loading="lazy">
+        <div class="the-end-overlay"></div>
+      </div>
+      <div class="container the-end-content-wrapper text-center">
+        <div class="mb-4 gsap-credits-header">
+          <h2 class="display-5 fw-bold text-navy glow-text-rose brand-font2">- FIN -</h2>
+          <p class="text-sub-navy fs-4 fw-semibold">Sekian dan Terima Kasih</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="fixed-bottom glass-footer py-2">
+    <div class="container-fluid px-3 px-md-4 d-flex align-items-center justify-content-between flex-wrap">
+      <div class="d-flex align-items-center gap-2 social-icon-group">
+        <a href="https://discord.gg/yourlink" target="_blank" class="social-link" title="Discord"><i class="fab fa-discord"></i></a>
+        <a href="https://twitch.tv/yourlink" target="_blank" class="social-link" title="Twitch"><i class="fab fa-twitch"></i></a>
+        <span class="d-none d-lg-inline ms-2 text-secondary">&copy; 2026 rucusmeowtiverse. All Rights Reserved</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('scrollProgressBar').style.width = scrolled + '%';
+    });
+
+    function copyHashtag(tag, element) {
+      navigator.clipboard.writeText(tag).then(() => {
+        showCopyToast(tag);
+        if (element) {
+          element.style.transform = 'translateY(-3px) scale(0.97)';
+          setTimeout(() => { element.style.transform = ''; }, 200);
+        }
+      });
+    }
+
+    function showCopyToast(text) {
+      let toast = document.getElementById('paletteCopyToast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'paletteCopyToast';
+        toast.style.cssText = 'position:fixed;bottom:80px;right:30px;z-index:2000;background:#0c2340;color:#fff;padding:12px 22px;border-radius:50px;box-shadow:0 10px 30px rgba(12,35,64,0.35);border:1.5px solid #3F8EC6;display:flex;align-items:center;gap:10px;opacity:0;transition:all 0.3s ease;';
+        document.body.appendChild(toast);
+      }
+      toast.innerHTML = `<i class="fas fa-check-circle text-success me-1"></i> Hashtag <strong>${text}</strong> disalin ke clipboard!`;
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateY(0) scale(1)';
+      setTimeout(() => { toast.style.opacity = '0'; toast.style.transform = 'translateY(20px) scale(0.9)'; }, 2400);
+    }
+
+    document.querySelectorAll('.meow-category-badge').forEach(badge => {
+      badge.addEventListener('click', function () {
+        document.querySelectorAll('.meow-category-badge').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        document.querySelectorAll('.meow-showcase-grid-panel').forEach(panel => panel.classList.remove('active'));
+        const targetPanel = document.getElementById(this.getAttribute('data-showcase-target'));
+        if (targetPanel) {
+          targetPanel.classList.add('active');
+          gsap.fromTo(targetPanel, { opacity: 0, scale: 0.96, y: 15 }, { opacity: 1, scale: 1, y: 0, duration: 0.45, ease: "power2.out" });
+        }
+      });
+    });
+
+    function initCardMarquees() {
+      const TARGET_SPEED_PX_PER_SEC = 60;
+      document.querySelectorAll('#creatorCard18 .marquee-card-content').forEach(content => {
+        const group1 = content.querySelector('.d-inline-flex');
+        if (!group1) return;
+        let group2 = content.querySelector('[aria-hidden="true"]');
+        if (!group2) {
+          group2 = group1.cloneNode(true);
+          group2.setAttribute('aria-hidden', 'true');
+          content.appendChild(group2);
+        } else {
+          group2.innerHTML = group1.innerHTML;
+        }
+        const groupWidth = group1.getBoundingClientRect().width || group1.offsetWidth;
+        if (groupWidth > 0) content.style.animationDuration = (groupWidth / TARGET_SPEED_PX_PER_SEC).toFixed(2) + 's';
+      });
+    }
+
+    window.addEventListener('load', () => {
+      initCardMarquees();
+      gsap.from('#identity .gsap-id-left, #identity .gsap-id-right, #identity .gsap-id-hashtags', {
+        scrollTrigger: { trigger: '#identity', start: 'top 75%' },
+        y: 30, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out'
+      });
+      gsap.from('#meowtiverse-showcase .gsap-showcase-header, #meowtiverse-showcase .gsap-showcase-nav', {
+        scrollTrigger: { trigger: '#meowtiverse-showcase', start: 'top 75%' },
+        y: 30, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out'
+      });
+    });
+    window.addEventListener('resize', initCardMarquees);
+  </script>
+</body>
+</html>

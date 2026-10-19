@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIVE RUCUS - REDEBUT SHOWCASE PRESENTATION 2026</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome 6 Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Fredoka:wght@300..700&family=Press+Start+2P&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* PALET WARNA RESMI BANNER RUCUS */
+      --c-blue-bell: #3F8EC6;
+      --c-steel-blue: #5DA4D4;
+      --c-sky-reflection: #68B3DB;
+      --c-sky-reflection-2: #81BADD;
+      --c-icy-blue: #B2DCF0;
+      --c-pale-sky: #CBECFB;
+      --c-pale-sky-2: #D1E5EF;
+      --c-vanilla-custard: #F7E39F;
+      --c-cotton-rose: #FFC5C7;
+      --c-white: #FFFFFF;
+
+      /* LIGHT MODE SURFACE & TYPOGRAPHY */
+      --c-light-bg: #f4f9fd;
+      --glass-card-bg: rgba(255, 255, 255, 0.95);
+      --glass-card-border: rgba(63, 142, 198, 0.22);
+      --text-main: #0c2340;
+      --text-sub: #1e3e62;
+      --shadow-fluffy: 0 8px 24px rgba(63, 142, 198, 0.12);
+      --shadow-hover: 0 12px 30px rgba(63, 142, 198, 0.22);
+
+      /* BACKGROUND SECTION */
+      --sec-welcome-bg: radial-gradient(circle at 50% 30%, #e6f3fa 0%, #f4f9fd 75%);
+      --sec-character-bg: radial-gradient(circle at 20% 50%, #fff5f6 0%, #f4f9fd 85%);
+      --sec-fanart-bg: linear-gradient(180deg, #f4f9fd 0%, #e6f3fb 50%, #f4f9fd 100%);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--c-light-bg); color: var(--text-main); overflow-x: hidden; }
+    body { background-color: var(--c-light-bg); padding-top: 75px; padding-bottom: 65px; position: relative; }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #eef6fc; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--c-blue-bell), var(--c-cotton-rose)); border-radius: 6px; border: 2px solid #eef6fc; }
+
+    h1, h2, h3, h4, h5, .brand-font { font-family: 'Fredoka', sans-serif; letter-spacing: 1px; color: var(--text-main); }
+    h6, .brand-font2 { font-family: 'Times New Roman', serif; letter-spacing: 1px; color: var(--text-main); }
+    .font-syne { font-family: 'Syne', sans-serif; }
+
+    .text-blue-bell { color: var(--c-blue-bell) !important; }
+    .text-steel { color: var(--c-steel-blue) !important; }
+    .text-custard { color: #b38500 !important; }
+    .text-rose { color: #d94b68 !important; }
+    .text-navy { color: var(--text-main) !important; }
+    .text-sub-navy { color: var(--text-sub) !important; }
+    .glow-text-blue { text-shadow: 0 4px 15px rgba(63, 142, 198, 0.35); }
+    .glow-text-gold { text-shadow: 0 4px 15px rgba(247, 227, 159, 0.6); }
+
+    .hero-logo-wrapper { max-width: 800px; width: 100%; margin: 0 auto; display: flex; justify-content: center; align-items: center; transition: transform 0.3s ease; }
+    .hero-logo-wrapper:hover { transform: scale(1.05); }
+    .hero-logo-img { max-width: 100%; height: auto; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(63, 142, 198, 0.25)); }
+
+    .glass-card { background: var(--glass-card-bg); border: 1.5px solid var(--glass-card-border); border-radius: 24px; box-shadow: var(--shadow-fluffy); transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+    .glass-card:hover { border-color: var(--c-blue-bell); box-shadow: var(--shadow-hover); }
+
+    .presentation-section { position: relative; min-height: calc(100vh - 75px); width: 100%; padding: 80px 20px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid rgba(63, 142, 198, 0.08); }
+    
+    .glass-header { background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid rgba(63, 142, 198, 0.2); z-index: 1050; box-shadow: 0 4px 20px rgba(63, 142, 198, 0.12); }
+    .header-logo { max-height: 44px; width: auto; object-fit: contain; border-radius: 10px; box-shadow: 0 3px 10px rgba(63, 142, 198, 0.25); transition: transform 0.3s ease; }
+    .header-logo:hover { transform: scale(1.05); }
+    .scroll-progress-container { position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: rgba(63, 142, 198, 0.1); }
+    .scroll-progress-bar { height: 100%; width: 0%; background: linear-gradient(90deg, var(--c-blue-bell), var(--c-steel-blue), var(--c-cotton-rose), var(--c-vanilla-custard)); box-shadow: 0 0 10px var(--c-blue-bell); transition: width 0.1s linear; }
+
+    .glass-footer { background: rgba(255, 255, 255, 0.95); border-top: 1px solid rgba(63, 142, 198, 0.25); z-index: 1050; height: auto; min-height: 55px; }
+    .social-link { color: var(--c-blue-bell); font-size: 1.25rem; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: var(--c-pale-sky); }
+    .social-link:hover { color: var(--c-white); background: var(--c-blue-bell); transform: translateY(-3px); box-shadow: 0 6px 14px rgba(63, 142, 198, 0.4); }
+    .marquee-container { overflow: hidden; white-space: nowrap; width: 290px; position: relative; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
+    .marquee-content { display: inline-block; animation: marquee 16s linear infinite; }
+    .marquee-content:hover { animation-play-state: paused; }
+    .support-badge { font-size: 0.75rem; font-weight: 800; color: #b38500; margin-right: 10px; }
+    .support-item { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--text-main); background: var(--c-pale-sky); padding: 3px 12px; border-radius: 12px; margin-right: 8px; text-decoration: none; border: 1px solid var(--c-icy-blue); transition: all 0.2s ease; }
+    .support-item:hover { color: var(--c-white); background: var(--c-blue-bell); border-color: var(--c-blue-bell); box-shadow: 0 4px 10px rgba(63, 142, 198, 0.3); }
+    @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+
+    /* SECTION 1: WELCOME */
+    #welcome { background: var(--sec-welcome-bg); display: flex; align-items: center; justify-content: center; text-align: center; }
+    .hero-video-bg-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 0; }
+    .hero-video-bg { width: 100%; height: 100%; object-fit: cover; opacity: 0.3; }
+    .hero-video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, rgba(244, 249, 253, 0.4) 0%, rgba(230, 243, 250, 0.85) 100%); z-index: 1; }
+    .hero-content-wrapper { position: relative; z-index: 2; }
+    .giant-typography { font-family: 'Syne', 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(3.2rem, 9.5vw, 7.5rem); line-height: 0.95; letter-spacing: -2px; text-transform: uppercase; background: linear-gradient(135deg, #0c2340 0%, var(--c-blue-bell) 45%, var(--c-steel-blue) 75%, #b38500 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; text-shadow: 0 10px 30px rgba(63, 142, 198, 0.2); }
+    .giant-subtext { font-family: 'Orbitron', sans-serif; font-size: clamp(1.1rem, 2.5vw, 1.8rem); font-weight: 700; letter-spacing: 6px; color: var(--c-blue-bell); text-transform: uppercase; margin-bottom: 25px; }
+
+    /* SECTION: CHARACTER SHEET */
+    #character { background: var(--sec-character-bg); }
+    .char-sheet-frame { width: 100%; height: 460px; object-fit: contain; border-radius: 20px; background: var(--c-white); padding: 8px; border: 2px solid var(--c-pale-sky-2); box-shadow: var(--shadow-fluffy); }
+    .color-swatch-box { height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 0.75rem; color: #0c2340; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); cursor: pointer; transition: transform 0.2s ease; }
+    .color-swatch-box:hover { transform: scale(1.06); }
+
+    /* SECTION: FANART */
+    #fanart { background: var(--sec-fanart-bg); height: auto; }
+    .fanart-stage-container { position: relative; width: 100%; max-width: 900px; margin: 0 auto; background: var(--c-white); border-radius: 24px; padding: 18px; border: 2px solid var(--c-icy-blue); box-shadow: var(--shadow-hover); }
+    .fanart-stage-img-wrapper { min-height: 460px; height: auto; width: 100%; padding: 15px; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 50%, #f0f8fd 0%, #e1f0f9 100%); border-radius: 18px; overflow: hidden; }
+    .fanart-stage-img { max-height: 80vh; max-width: 100%; width: auto; height: auto; object-fit: contain; filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15)); transition: transform 0.4s ease; }
+
+    @media (max-width: 768px) {
+      .presentation-section { padding: 50px 15px; }
+      .giant-typography { font-size: 2.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar navbar-expand fixed-top glass-header py-2">
+    <div class="container-fluid px-3 px-md-4">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#welcome">
+        <img src="D:\Desktop NVME\Pictures NVME\Stream\Badges\2000px (di atas 1 MB)\ShinyBadges.png" alt="Logo Live Rucus" id="liveRucusLogo" class="header-logo">
+        <span class="logo-text d-none d-sm-inline text-blue-bell brand-font fs-6 fw-bold">Rucus ID</span>
+      </a>
+      <div class="marquee-container ms-auto d-none d-md-block">
+        <div class="marquee-content">
+          <span class="support-badge"><i class="fas fa-heart text-danger me-1"></i> Support Platforms:</span>
+          <a href="https://saweria.co/yourlink" target="_blank" class="support-item"><i class="fas fa-donate me-1"></i> Saweria</a>
+          <a href="https://trakteer.id/yourlink" target="_blank" class="support-item"><i class="fas fa-coffee me-1"></i> Trakteer.id</a>
+          <a href="https://fuomo.id/yourlink" target="_blank" class="support-item"><i class="fas fa-gift me-1"></i> Fuomo</a>
+          <a href="https://tako.id/yourlink" target="_blank" class="support-item"><i class="fas fa-star me-1"></i> Tako</a>
+          <a href="https://sociabuzz.com/yourlink" target="_blank" class="support-item"><i class="fas fa-bolt me-1"></i> SociaBuzz</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+  </header>
+
+  <main id="mainPresentationContainer">
+    <!-- WELCOME SECTION -->
+    <section id="welcome" class="presentation-section">
+      <div class="hero-video-bg-container">
+        <video autoplay loop muted playsinline class="hero-video-bg" id="heroBgVideo">
+          <source src="D:\Desktop NVME\Pictures NVME\Stream\play minecraft render test 2.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-overlay"></div>
+      </div>
+      <div class="container hero-content-wrapper gsap-welcome-content text-center">
+        <div class="hero-logo-wrapper mx-auto mb-3">
+          <img src="D:\Desktop NVME\Pictures NVME\Stream\Channel\Logo Rao\fontype logo_Rucus LIVE ID.png" alt="Rucus Logo" class="img-fluid hero-logo-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- MEOWTIVERSE LORE / FANART SECTION -->
+    <section id="fanart" class="presentation-section">
+      <div class="container text-center">
+        <div class="mb-4 gsap-fanart-header">
+          <h2 class="display-5 fw-bold text-navy glow-text-blue">MEOWTIVERSE LORE</h2>
+          <p class="text-sub-navy">Dalami cerita kehidupan Rucus di dunia Meowtiverse sebelum masuk dunia streaming</p>
+        </div>
+
+        <div id="fanartCarousel" class="carousel slide fanart-stage-container" data-bs-ride="carousel" data-bs-interval="3500">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="fanart-stage-img-wrapper">
+                <img src="D:\Desktop NVME\Pictures NVME\Character Sheet Rucus\Mini Comic-20260910T010946Z-1-001\Mini Comic\PNG Files\Comic rucus 1.png" alt="Fanart 1" class="fanart-stage-img">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="fanart-stage-img-wrapper">
+                <img src="D:\Desktop NVME\Pictures NVME\Character Sheet Rucus\Mini Comic-20260910T010946Z-1-001\Mini Comic\PNG Files\Comic rucus 2.png" alt="Fanart 2" class="fanart-stage-img">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="fanart-stage-img-wrapper">
+                <img src="D:\Desktop NVME\Pictures NVME\Character Sheet Rucus\Mini Comic-20260910T010946Z-1-001\Mini Comic\PNG Files\Comic rucus 3 revisi 1.png" alt="Fanart 3" class="fanart-stage-img">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="fanart-stage-img-wrapper">
+                <img src="D:\Desktop NVME\Pictures NVME\Character Sheet Rucus\Mini Comic-20260910T010946Z-1-001\Mini Comic\PNG Files\Comic rucus 4.png" alt="Fanart 4" class="fanart-stage-img">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="fanart-stage-img-wrapper">
+                <img src="D:\Desktop NVME\Pictures NVME\Character Sheet Rucus\Mini Comic-20260910T010946Z-1-001\Mini Comic\PNG Files\Comic rucus 5.png" alt="Fanart 5" class="fanart-stage-img">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="fanart-stage-img-wrapper">
+                <img src="D:\Desktop NVME\Pictures NVME\Character Sheet Rucus\Mini Comic-20260910T010946Z-1-001\Mini Comic\PNG Files\Comic rucus 6 revisi 2.png" alt="Fanart 6" class="fanart-stage-img">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="fanart-stage-img-wrapper">
+                <img src="D:\Desktop NVME\Pictures NVME\Character Sheet Rucus\Mini Comic-20260910T010946Z-1-001\Mini Comic\PNG Files\Comic rucus 7.png" alt="Fanart 7" class="fanart-stage-img">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="fanart-stage-img-wrapper">
+                <img src="D:\Desktop NVME\Pictures NVME\Character Sheet Rucus\Mini Comic-20260910T010946Z-1-001\Mini Comic\PNG Files\Comic rucus 8.png" alt="Fanart 8" class="fanart-stage-img">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="fanart-stage-img-wrapper">
+                <img src="D:\Desktop NVME\Pictures NVME\Character Sheet Rucus\Mini Comic-20260910T010946Z-1-001\Mini Comic\PNG Files\Comic rucus 9 revisi 2.png" alt="Fanart 9" class="fanart-stage-img">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="fanart-stage-img-wrapper">
+                <img src="D:\Desktop NVME\Pictures NVME\Character Sheet Rucus\Mini Comic-20260910T010946Z-1-001\Mini Comic\PNG Files\Comic rucus 10.png" alt="Fanart 10" class="fanart-stage-img">
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#fanartCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#fanartCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHARACTER SHEET SECTION-->
+    <section id="character" class="presentation-section">
+      <div class="container">
+        <div class="text-center mb-4 gsap-char-header">
+          <h2 class="display-5 fw-bold text-navy glow-text-gold">CHARACTER DESIGN SHEET</h2>
+          <p class="text-sub-navy">Lembar referensi desain model, proporsi karakter, dan palet warna resmi Rucus</p>
+        </div>
+
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-8 gsap-char-left">
+            <div class="glass-card p-3 text-center">
+              <img src="D:\Desktop NVME\Pictures NVME\Character Sheet Rucus\CMS56_WH2.JPG" alt="Character Sheet Rucus" class="char-sheet-frame">
+            </div>
+          </div>
+
+          <div class="col-lg-4 gsap-char-right">
+            <div class="glass-card p-4">
+              <h4 class="text-custard mb-3"><i class="fas fa-swatchbook me-2"></i> Color Palette</h4>
+              <div class="row g-2 mb-4">
+                <div class="col-4"><div class="color-swatch-box" style="background-color: #FFECDE;">#FFECDE</div></div>
+                <div class="col-4"><div class="color-swatch-box" style="background-color: #8CBBED; color: #fff;">#8CBBED</div></div>
+                <div class="col-4"><div class="color-swatch-box" style="background-color: #A4C3F9; color: #fff;">#A4C3F9</div></div>
+                <div class="col-6"><div class="color-swatch-box" style="background-color: #F4B1A0;">#F4B1A0</div></div>
+                <div class="col-6"><div class="color-swatch-box" style="background-color: #697CC8; color: #fff;" onclick="copyHex('#697CC8')">#697CC8</div></div>
+                <div class="col-4"><div class="color-swatch-box" style="background-color: #FF616F;">#FF616F</div></div>
+                <div class="col-4"><div class="color-swatch-box" style="background-color: #988BD1;">#988BD1</div></div>
+                <div class="col-4"><div class="color-swatch-box" style="background-color: #274E91; color: #fff;">#274E91</div></div>
+                <div class="col-6"><div class="color-swatch-box" style="background-color: #B6668D;">#B6668D</div></div>
+                <div class="col-6"><div class="color-swatch-box" style="background-color: #FDF3F2; border: 1px solid #4d4d4d;">#FDF3F2</div></div>
+                <div class="col-6"><div class="color-swatch-box" style="background-color: #3E404D; color: #fff;">#3F8EC6</div></div>
+                <div class="col-6"><div class="color-swatch-box" style="background-color: #C7B188;">#C7B188</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- NEXT PAGE BUTTON LINK (Opsional - Silahkan hubungkan dengan nama file page 2 anda) -->
+        <div class="text-center mt-5">
+           <a href="page2.html" class="btn btn-outline-primary rounded-pill px-4 fw-bold">Selanjutnya ke Bagian 2 <i class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer class="fixed-bottom glass-footer py-2">
+    <div class="container-fluid px-3 px-md-4 d-flex align-items-center justify-content-between flex-wrap">
+      <div class="d-flex align-items-center gap-2 social-icon-group">
+        <a href="https://discord.gg/yourlink" target="_blank" class="social-link" title="Discord"><i class="fab fa-discord"></i></a>
+        <a href="https://twitch.tv/yourlink" target="_blank" class="social-link" title="Twitch"><i class="fab fa-twitch"></i></a>
+        <a href="https://tiktok.com/@yourlink" target="_blank" class="social-link" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://instagram.com/yourlink" target="_blank" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/yourlink" target="_blank" class="social-link" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://x.com/yourlink" target="_blank" class="social-link" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+        <span class="d-none d-lg-inline ms-2 text-secondary">&copy; 2026 rucusmeowtiverse. All Rights Reserved</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('scrollProgressBar').style.width = scrolled + '%';
+    });
+
+    function copyHex(hexCode) {
+      navigator.clipboard.writeText(hexCode);
+      alert('Kode warna ' + hexCode + ' berhasil disalin ke clipboard!');
+    }
+
+    window.addEventListener('load', () => {
+      gsap.from('.giant-subtext', { y: -30, opacity: 0, duration: 0.9, ease: 'back.out(1.5)' });
+      gsap.from('.giant-typography', { scale: 0.9, opacity: 0, duration: 1, ease: 'power2.out', delay: 0.1 });
+      
+      gsap.from('#character .glass-card', {
+        scrollTrigger: { trigger: '#character', start: 'top 75%' },
+        y: 30, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out'
+      });
+    });
+  </script>
+</body>
+</html>
