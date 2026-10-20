@@ -1669,6 +1669,25 @@
       font-size: 0.65rem;
       padding: 6px 12px;
     }
+
+    /* Penyesuaian Hashtag Card khusus untuk Layar HP (Mobile) */
+    @media (max-width: 575.98px) {
+      .hashtag-card-enhanced {
+        padding: 12px;
+        border-radius: 14px;
+      }
+      .hashtag-pill-badge {
+        padding: 4px 10px;
+        font-size: 0.65rem;
+      }
+      .hashtag-card-enhanced .desc-text {
+        font-size: 0.65rem !important;
+        line-height: 1.3;
+      }
+      .hashtag-card-enhanced .footer-text {
+        font-size: 0.75rem !important;
+      }
+    }
   </style>
 </head>
 
@@ -1970,48 +1989,48 @@
                 </div>
                 <span class="badge bg-blue-bell text-white rounded-pill px-3 py-2 fs-7 fw-bold">4 Official Tags</span>
               </div>
-              <div class="row g-3 g-md-4">
-                <div class="col-sm-6 col-lg-3">
+              <div class="row g-2 g-md-4">
+                <div class="col-6 col-lg-3">
                   <div class="hashtag-card-enhanced" onclick="copyHashtag('#RucusLiveID', this)" title="Klik untuk menyalin #RucusLiveID">
                     <div>
                       <div class="d-flex align-items-center justify-content-between mb-2"><span class="hashtag-pill-badge">#RucusLiveID</span></div>
-                      <div class="text-sub-navy fs-7 mb-2">Topik umum, jadwal live, dan interaksi di YouTube atau Twitch</div>
+                      <div class="text-sub-navy fs-7 mb-2 desc-text">Topik umum, jadwal live, dan interaksi di YouTube atau Twitch</div>
                     </div>
                     <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary-subtle">
-                      <div class="fs-6 fw-bold text-navy">Livestream</div>
+                      <div class="fw-bold text-navy footer-text">Livestream</div>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-6 col-lg-3">
                   <div class="hashtag-card-enhanced" onclick="copyHashtag('#RucusFanArt', this)" title="Klik untuk menyalin #RucusFanArt">
                     <div>
                       <div class="d-flex align-items-center justify-content-between mb-2"><span class="hashtag-pill-badge">#RucusFanArt</span></div>
-                      <div class="text-sub-navy fs-7 mb-2">Tempat membagikan gambar atau karya seni</div>
+                      <div class="text-sub-navy fs-7 mb-2 desc-text">Tempat membagikan gambar atau karya seni</div>
                     </div>
                     <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary-subtle">
-                      <div class="fs-6 fw-bold text-navy">Karya Seni (SFW)</div>
+                      <div class="fw-bold text-navy footer-text">Karya Seni (SFW)</div>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-6 col-lg-3">
                   <div class="hashtag-card-enhanced" onclick="copyHashtag('#RucusMeme', this)" title="Klik untuk menyalin #RucusMeme">
                     <div>
                       <div class="d-flex align-items-center justify-content-between mb-2"><span class="hashtag-pill-badge">#RucusMeme</span></div>
-                      <div class="text-sub-navy fs-7 mb-2">Khusus untuk berbagi gambar atau video lucu</div>
+                      <div class="text-sub-navy fs-7 mb-2 desc-text">Khusus untuk berbagi gambar atau video lucu</div>
                     </div>
                     <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary-subtle">
-                      <div class="fs-6 fw-bold text-navy">Meme Komedi</div>
+                      <div class="fw-bold text-navy footer-text">Meme Komedi</div>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-6 col-lg-3">
                   <div class="hashtag-card-enhanced" onclick="copyHashtag('#RucusClip', this)" title="Klik untuk menyalin #RucusClip">
                     <div>
                       <div class="d-flex align-items-center justify-content-between mb-2"><span class="hashtag-pill-badge">#RucusClip</span></div>
-                      <div class="text-sub-navy fs-7 mb-2">Potongan video momen seru atau barbar</div>
+                      <div class="text-sub-navy fs-7 mb-2 desc-text">Potongan video momen seru atau barbar</div>
                     </div>
                     <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary-subtle">
-                      <div class="fs-6 fw-bold text-navy">Potongan Klip</div>
+                      <div class="fw-bold text-navy footer-text">Potongan Klip</div>
                     </div>
                   </div>
                 </div>
@@ -2988,316 +3007,4 @@
                     <div class="marquee-avatar-item" title="Supporter 17"><img src="https://yt3.googleusercontent.com/f26UlVN-fawdp-XBfMQstSkDBFtbJplT919GH3BvPZTzHYFTexuBR2_5rH3J2rIoucnvTTSdEw=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 17" class="marquee-avatar-img"></div>
                     <div class="marquee-avatar-item" title="Supporter 18"><img src="https://yt3.googleusercontent.com/yQCKo1KqwgC7kQ6qc8MDQuFj6XjIFtEAfs-l5ojgasLT0T3d3MW5eNCuYeKFBCXDvlqw5a1n=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 18" class="marquee-avatar-img"></div>
                     <div class="marquee-avatar-item" title="Supporter 19"><img src="https://yt3.googleusercontent.com/adgMASREdFUk_TSWJizZvO7-g7BkKA-XB9ZYkj0oFlllywtNrmBQqDfj3ux8Dpw9-d7ij06Ie94=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 19" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 20"><img src="https://yt3.googleusercontent.com/fWgc3F-J5jDus4SbwQiajgAF21cjASTMMa1B7CRIIubWkLHbdEGTzk90KTBvRg6qB5t9sp_w=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 20" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 21"><img src="https://scontent.fbdo9-1.fna.fbcdn.net/v/t39.30808-1/686978252_122098296399296891_6903703591436773761_n.jpg?stp=cp0_dst-jpg_tt6&cstp=mx1028x1039&ctp=s60x60&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=e99d92&_nc_ohc=ypkUwZQqo3sQ7kNvwEd2ddZ&_nc_oc=Adr5DhkD9TgUlTiGE8_O0TMp-0BTyA-t8X-VK1pK1yiXQn5Czt0rRORpGOuQzd77M_M&_nc_zt=24&_nc_ht=scontent.fbdo9-1.fna&_nc_gid=pt9j36qkUKssUKDi6lq1Ow&_nc_ss=7b2a8&oh=00_AQPJgypA9CAZtASPhC1Pz1jq_G-kjar5tIceeisNm90v7Q&oe=6AC627BA" alt="Supporter 21" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 22"><img src="https://instagram.fbdo9-1.fna.fbcdn.net/v/t51.82787-19/754561230_17961590160152349_831296800386827352_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=IpqPacNPPzUQ7kNvwGft-B4&_nc_oc=AdqtyG_0zj8yJbuTsNiCLeL6VWwk7SLhiaR_Bi552YeErw-NtN1kfDehhA-QPSoGW2Q&_nc_zt=24&_nc_ht=instagram.fbdo9-1.fna&_nc_gid=LZ8H5O7SRvdZTawdR3f8jQ&_nc_ss=7baaf&oh=00_AQPwflOAdENfTGvevJ2d6avEDy0lh5x7bygdqjLDQYrJfw&oe=6AC63179" alt="Supporter 22" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 23"><img src="https://yt3.googleusercontent.com/jCWox7Bsq04cyfRN3bVZc4xL1uyiIIWvLXtI7AliwF1zqoX1fNpZ-jNaqz90ft2H3lTujTlYFg=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 23" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 24"><img src="https://yt3.googleusercontent.com/t8h70oAHtnFioS34rSPJdKudJ-F6ChX1j8xad3jie9zTqLL8TAGZRjkomuumUxJ3EKP1IilEYA=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 24" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 25"><img src="https://yt3.googleusercontent.com/_w699SpqnL1kT-92VXIIT9FgvyK8TWXJhYJBxhQb3OU3n3ZjGzdfQOF-pQywls2Hmx98OrQF=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 25" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 26"><img src="https://yt3.googleusercontent.com/fmbkoHHGHX_mYi9xq53uQlGGJQFGQXCJHyS0gOZZrPw3-lB15Z3xzJdZPxi60h5iyjPPAXZj1w=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 26" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 27"><img src="https://yt3.googleusercontent.com/epP6JDTZHXHdGo4fuvSGGiQ3jVOZraaFlQBMczF6-lx5jAS0FbVOBf3v3FxM0ODw5VdAiotN6g=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 27" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 28"><img src="https://yt3.googleusercontent.com/0eMgo1CatrmspptYaLFuB8TaVosNxsWa5S_mxxzFEfiJn-VHhCtP6C0Z7pgNGB_JRwqvl_DFpw=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 28" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 29"><img src="https://yt3.googleusercontent.com/ispF7dGCCX4KrLYelzMa9zCFRQ25EOcCVSBiSIjGE9XGO7gmi-9LoKIh47zNVHFNgoZ-dWeH=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 29" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 30"><img src="https://yt3.googleusercontent.com/ytc/AIdro_lglbknCoNVxoJCsth4pEcIrjlmInTWLz2rWUWZqBs4RA=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 30" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 31"><img src="https://yt3.googleusercontent.com/Ys-dpg3Z0z__CvTl2cZb3rcth-TyA7cNOY9c77-EyAvBefQW2x6rvGm18S7XGYGu5qZHlOpjask=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 31" class="marquee-avatar-img"></div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- BARIS 3: KIRI KE KANAN (Supporter 31 - 45) -->
-              <div class="marquee-card-container">
-                <div class="marquee-card-content marquee-dir-left-to-right">
-                  <div class="d-inline-flex gap-3 align-items-center me-3">
-                    <div class="marquee-avatar-item" title="Supporter 31"><img src="https://yt3.ggpht.com/RoHoWz640uRSvbDivyRbrUtU6729s6olE-A4KUIE22mnLTTAucmy5TTFhTEphIZhENiOKc27KQ=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 31" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 32"><img src="https://yt3.ggpht.com/WdKXBdUHRZmDu5wMibyvbgqMjNeWHlNlD1DlY3WesW4fiLLGk0YRryFRhJ4LxpUYr-L6yAel-IM=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 32" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 33"><img src="https://yt3.googleusercontent.com/Ve8QxhPH-pbvYfubYImrPG2fl3cqdeTVZNekGdUZd-5I1lCNJmq33gk2LJH4l2OdUoiYY2e0=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 33" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 34"><img src="https://yt3.googleusercontent.com/fQemadKSa0zAqSSsdGt_LhBOmh1lWXmLrAByGT2jCuSiBaqA6WIw3n4gYHgelMMe7FQNGlGN=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 34" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 35"><img src="https://yt3.googleusercontent.com/BvqOmtrQZNvVNKKm1x1axh9oIcwu-N6isxu6zYWjGGvP-gONSCJfrI4sEenf9MbMZT7TihQULw=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 35" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 36"><img src="https://yt3.googleusercontent.com/rNSB0ZGAozy9MrmK5z-VZz6tBKraZHl1MqFItYSVtg9LIv3tnGvkE2-ssA85e5MJmWuXIK4Wmw=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 36" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 37"><img src="https://yt3.ggpht.com/bbQ7JcMG9aIHaV1H-8kVwO2bjypPmJDF8gwd1flR6CC6KNX2bT4F7P_C26WSXzTGD6cnbw34_lE=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 37" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 38"><img src="https://yt3.googleusercontent.com/3QLcPzWycwsJ_Csabp0IjCIlgS9-3TLsG8F0fEoFBX0oPccQXqtR1lH9m3XMCIrPCKlbdQ7McQ=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 38" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 39"><img src="https://yt3.googleusercontent.com/V8CYkEjKoMf05i0j9uZmfMo_mEe2ctJOLvqkmkwhaxHCTpy8dksgTZNy5iegNSXotZsttay3XA=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 39" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 40"><img src="https://yt3.googleusercontent.com/u2GzakTaS-ooaAlQ0Cu9U224uqHjEt9LDeu3La_iHWDSFK2JM8KZ7Gi_WG6o3qsoJlUsimKsaw=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 40" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 41"><img src="https://yt3.googleusercontent.com/MxlfVM2xp7yg9zsn58jVptRy4oWMYnGyQN5j9u-7W4_6QL7JN0Aju8ZdISaAI7l0-UiMb4ie_A=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 41" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 42"><img src="https://yt3.googleusercontent.com/IhCI-PlbeoDXnxpEroeXTNQCfrssc_MVoH1y68scLqwnw_kND2Hfx-cB9o3BAjz4UCuhsZ3vMvY=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 42" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 43"><img src="https://yt3.googleusercontent.com/nKPFjxrEYNDm_EQKm-0_OE-me3oV5Eyr2yiGy_fCvDX4BQmyBYL3ECSFI0JuHYO6h02gZsNMlQ=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 43" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 44"><img src="https://yt3.googleusercontent.com/k53qwNqY4rbeQbvXmHlYw7ZlydODNpY9ro8JRPtfdCmzy_aZJiGqX2IB3owz30ygjzudWIj_=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 44" class="marquee-avatar-img"></div>
-                    <div class="marquee-avatar-item" title="Supporter 45"><img src="https://yt3.googleusercontent.com/r0CziSwavO23sgVkO8DTTVQXKUZFl9Ysm-4FWOk6bwJ-AR9ZEdO6ZI9U4UucaP_0_gDitUEpazQ=s176-c-k-c0x00ffffff-no-rj-mo" alt="Supporter 45" class="marquee-avatar-img"></div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================== -->
-    <!-- THE END -->
-    <!-- ======================================================================== -->
-    <section id="the-end" class="presentation-section">
-      <div class="the-end-bg-container">
-        <img src="asets/ucufwsv2.png" alt="The End Background Image" class="the-end-bg-img" id="theEndBgImg">
-        <div class="the-end-overlay"></div>
-      </div>
-
-      <div class="container the-end-content-wrapper text-center">
-        <div class="mb-4 gsap-credits-header">
-          <h2 class="display-5 fw-bold text-navy glow-text-rose brand-font2">- FIN -</h2>
-          <p class="text-sub-navy fs-4 fw-semibold">Sekian dan Terima Kasih</p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ========================================================================== -->
-  <!-- FOOTER SECTION (POSISI FIXED DI BAWAH) -->
-  <!-- ========================================================================== -->
-  <footer class="fixed-bottom glass-footer py-2">
-    <div class="container-fluid px-3 px-md-4 d-flex align-items-center justify-content-between flex-wrap">
-
-      <!-- FOOTER SISI KIRI: SOSIAL MEDIA ICONS -->
-      <div class="d-flex align-items-center gap-2 social-icon-group">
-        <!-- [MODIFIKASI] TARUH LINK DISCORD DISINI (Ganti href) -->
-        <a href="https://discord.gg/yourlink" target="_blank" class="social-link" title="Discord"><i class="fab fa-discord"></i></a>
-        <!-- [MODIFIKASI] TARUH LINK TWITCH DISINI (Ganti href) -->
-        <a href="https://twitch.tv/yourlink" target="_blank" class="social-link" title="Twitch"><i class="fab fa-twitch"></i></a>
-        <!-- [MODIFIKASI] TARUH LINK TIKTOK DISINI (Ganti href) -->
-        <a href="https://tiktok.com/@yourlink" target="_blank" class="social-link" title="TikTok"><i class="fab fa-tiktok"></i></a>
-        <!-- [MODIFIKASI] TARUH LINK INSTAGRAM DISINI (Ganti href) -->
-        <a href="https://instagram.com/yourlink" target="_blank" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <!-- [MODIFIKASI] TARUH LINK FACEBOOK DISINI (Ganti href) -->
-        <a href="https://facebook.com/yourlink" target="_blank" class="social-link" title="Facebook"><i class="fab fa-facebook"></i></a>
-        <!-- [MODIFIKASI] TARUH LINK X / TWITTER DISINI (Ganti href) -->
-        <a href="https://x.com/yourlink" target="_blank" class="social-link" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-        <span class="d-none d-lg-inline ms-2 text-secondary">&copy; 2026 rucusmeowtiverse. All Rights Reserved</span>
-      </div>
-
-  </footer>
-
-  <!-- ========================================================================== -->
-  <!-- JAVASCRIPT & GSAP ANIMATIONS SCRIPT -->
-  <!-- ========================================================================== -->
-  <!-- Bootstrap 5 Bundle JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- GSAP Core & ScrollTrigger Plugin CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <script>
-    // Registrasi GSAP ScrollTrigger
-    gsap.registerPlugin(ScrollTrigger);
-
-    // 1. SCROLL PROGRESS BAR LOGIC (Header bottom progress bar)
-    window.addEventListener('scroll', () => {
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      document.getElementById('scrollProgressBar').style.width = scrolled + '%';
-    });
-
-    // 2. HELPER COPY COLOR HEX CODE & HASHTAG TO CLIPBOARD
-    function copyHex(hexCode) {
-      navigator.clipboard.writeText(hexCode);
-      alert('Kode warna ' + hexCode + ' berhasil disalin ke clipboard!');
-    }
-
-    function copyHashtag(tag, element) {
-      navigator.clipboard.writeText(tag).then(() => {
-        showCopyToast(tag);
-        if (element) {
-          element.style.transform = 'translateY(-3px) scale(0.97)';
-          setTimeout(() => { element.style.transform = ''; }, 200);
-        }
-      }).catch(err => {
-        console.error('Gagal menyalin hashtag: ', err);
-      });
-    }
-
-    function showCopyToast(text) {
-      let toast = document.getElementById('paletteCopyToast');
-      if (!toast) {
-        toast = document.createElement('div');
-        toast.id = 'paletteCopyToast';
-        toast.style.cssText = 'position:fixed;bottom:80px;right:30px;z-index:2000;background:#0c2340;color:#fff;padding:12px 22px;border-radius:50px;font-family:"Plus Jakarta Sans",sans-serif;font-size:0.88rem;font-weight:700;box-shadow:0 10px 30px rgba(12,35,64,0.35);border:1.5px solid #3F8EC6;display:flex;align-items:center;gap:10px;opacity:0;transform:translateY(20px) scale(0.9);pointer-events:none;transition:all 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);';
-        document.body.appendChild(toast);
-      }
-      toast.innerHTML = `<i class="fas fa-check-circle text-success me-1"></i> Hashtag <strong>${text}</strong> disalin ke clipboard!`;
-      toast.style.opacity = '1';
-      toast.style.transform = 'translateY(0) scale(1)';
-      setTimeout(() => {
-        toast.style.opacity = '0';
-        toast.style.transform = 'translateY(20px) scale(0.9)';
-      }, 2400);
-    }
-
-    // 3. DEBUGGER: TOGGLE RGB OUTLINE MODE
-    function toggleRgbDebugMode() {
-      document.body.classList.toggle('debug-rgb-mode');
-      const btn = document.getElementById('rgbDebugBtn');
-      if (document.body.classList.contains('debug-rgb-mode')) {
-        btn.innerHTML = '<i class="fas fa-bug me-1"></i> RGB Outlines: ON';
-        btn.style.borderColor = '#ff0055';
-        btn.style.color = '#ff0055';
-        btn.style.boxShadow = '0 0 15px rgba(255, 0, 85, 0.7)';
-      } else {
-        btn.innerHTML = '<i class="fas fa-bug me-1"></i> RGB Outlines: OFF';
-        btn.style.borderColor = '#00f3ff';
-        btn.style.color = '#00f3ff';
-        btn.style.boxShadow = '0 0 15px rgba(0, 243, 255, 0.6)';
-      }
-    }
-
-    // 4. MEOWTIVERSE SHOWCASE CATEGORY SWITCHER & TAGLINE LOGIC
-    document.querySelectorAll('.meow-category-badge').forEach(badge => {
-      badge.addEventListener('click', function () {
-        document.querySelectorAll('.meow-category-badge').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-
-        document.querySelectorAll('.meow-showcase-grid-panel').forEach(panel => panel.classList.remove('active'));
-
-        const targetId = this.getAttribute('data-showcase-target');
-        const targetPanel = document.getElementById(targetId);
-        const tagline = this.getAttribute('data-tagline');
-        const taglineEl = document.getElementById('showcaseActiveTagline');
-
-        if (taglineEl && tagline) {
-          taglineEl.textContent = tagline;
-        }
-
-        if (targetPanel) {
-          targetPanel.classList.add('active');
-          gsap.fromTo(targetPanel,
-            { opacity: 0, scale: 0.96, y: 15 },
-            { opacity: 1, scale: 1, y: 0, duration: 0.45, ease: "power2.out" }
-          );
-        }
-      });
-    });
-
-    // 5. INTERACTIVE CREATOR CREDITS TAB SWITCHER (7 Cards Navigation)
-    function switchCreatorTab(cardIndex) {
-      document.querySelectorAll('.creator-tab-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.creator-card-full').forEach(card => card.classList.remove('active'));
-
-      const activeBtn = document.querySelectorAll('.creator-tab-btn')[cardIndex - 1];
-      const activeCard = document.getElementById('creatorCard' + cardIndex);
-
-      if (activeBtn) activeBtn.classList.add('active');
-      if (activeCard) {
-        activeCard.classList.add('active');
-        gsap.fromTo(activeCard, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' });
-        if (cardIndex === 18) {
-          setTimeout(initCardMarquees, 50);
-        }
-      }
-    }
-
-    // ==========================================================================
-    // 5.1 AUTOMATIC MARQUEE TICKER INITIALIZER (DUPLICATION & EQUAL SPEED)
-    // ==========================================================================
-    function initCardMarquees() {
-      const TARGET_SPEED_PX_PER_SEC = 60; // Kecepatan konstan piksel/detik untuk SEMUA baris
-
-      document.querySelectorAll('#creatorCard18 .marquee-card-content').forEach(content => {
-        const group1 = content.querySelector('.d-inline-flex');
-        if (!group1) return;
-
-        // 1. Cek & buat/sinkronkan Group 2 otomatis jika user menghapus atau mengubah avatar di Group 1
-        let group2 = content.querySelector('[aria-hidden="true"]');
-        if (!group2) {
-          group2 = group1.cloneNode(true);
-          group2.setAttribute('aria-hidden', 'true');
-          content.appendChild(group2);
-        } else {
-          group2.innerHTML = group1.innerHTML;
-        }
-
-        // 2. Hitung lebar piksel Group 1
-        const groupWidth = group1.getBoundingClientRect().width || group1.offsetWidth;
-
-        if (groupWidth > 0) {
-          // Hitung durasi (detik) = lebar piksel / kecepatan target piksel per detik
-          const duration = groupWidth / TARGET_SPEED_PX_PER_SEC;
-          content.style.animationDuration = duration.toFixed(2) + 's';
-        }
-      });
-    }
-
-    // ==========================================================================
-    // INIALISASI ANIMASI FLUID SCROLL GSAP (RINGAN 60FPS)
-    // ==========================================================================
-    window.addEventListener('load', () => {
-      initCardMarquees();
-
-      // Kinetic Typography Welcome Hero Animation
-      gsap.from('.giant-subtext', { y: -30, opacity: 0, duration: 0.9, ease: 'back.out(1.5)' });
-      gsap.from('.giant-typography', { scale: 0.9, opacity: 0, duration: 1, ease: 'power2.out', delay: 0.1 });
-
-      // GSAP ScrollTrigger reveal animations (Fluid non-sticky 60FPS)
-      gsap.from('#lore .video-container-wrapper', {
-        scrollTrigger: { trigger: '#lore', start: 'top 75%' },
-        scale: 0.95, opacity: 0, duration: 0.8, ease: 'power2.out'
-      });
-
-      gsap.from('#character .glass-card', {
-        scrollTrigger: { trigger: '#character', start: 'top 75%' },
-        y: 30, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out'
-      });
-
-      gsap.from('#l2d .l2d-showcase-container', {
-        scrollTrigger: { trigger: '#l2d', start: 'top 75%' },
-        y: 40, opacity: 0, duration: 0.9, ease: 'power2.out'
-      });
-
-      gsap.from('#identity .gsap-id-left, #identity .gsap-id-right, #identity .gsap-id-hashtags', {
-        scrollTrigger: { trigger: '#identity', start: 'top 75%' },
-        y: 30, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out'
-      });
-
-      gsap.from('#meowtiverse-showcase .gsap-showcase-header, #meowtiverse-showcase .gsap-showcase-nav', {
-        scrollTrigger: { trigger: '#meowtiverse-showcase', start: 'top 75%' },
-        y: 30, opacity: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out'
-      });
-
-    });
-
-    window.addEventListener('resize', initCardMarquees);
-
-    // 6. IMAGE LIGHTBOX ZOOM MODAL HELPER FUNCTION
-    function openZoomModal(imgSrc, imgAlt) {
-      document.getElementById('zoomModalImg').src = imgSrc;
-      document.getElementById('zoomModalImg').alt = imgAlt || 'Enlarged Image';
-      const zoomModalEl = document.getElementById('imageZoomModal');
-      const modal = new bootstrap.Modal(zoomModalEl);
-      modal.show();
-    }
-  </script>
-
-  <!-- ========================================================================== -->
-  <!-- LIGHTBOX IMAGE ZOOM MODAL (FULLSCREEN PREVIEW) -->
-  <!-- ========================================================================== -->
-  <div class="modal fade" id="imageZoomModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content glass-card border-0 p-3 text-center" style="background: rgba(255, 255, 255, 0.98);">
-        <div class="modal-header border-0 pb-2 justify-content-between">
-          <div class="d-flex align-items-center gap-2">
-            <i class="fa-solid fa-expand text-blue-bell fs-5"></i>
-            <h5 class="modal-title font-syne fw-bold text-navy">Pratinjau Layar Penuh</h5>
-          </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-2 d-flex justify-content-center align-items-center" style="overflow: auto;">
-          <img id="zoomModalImg" src="" alt="Enlarged Image" class="img-fluid rounded-4 shadow-lg"
-            style="max-height: 82vh; width: auto; object-fit: contain;">
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-
-</html>
+                    <div class="marquee-avatar-item" title="Supp
